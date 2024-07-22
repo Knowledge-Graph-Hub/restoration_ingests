@@ -1,7 +1,7 @@
 # Config file for transforming data from a source
 # See additional/optional config parameters at https://koza.monarchinitiative.org/Ingests/source_config/
 
-name: "sevilleja_transform"
+name: "transform"
 metadata: "./src/restoration_ingests/metadata.yaml"
 format: "csv"
 files:
