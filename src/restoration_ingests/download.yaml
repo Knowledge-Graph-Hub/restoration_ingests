@@ -3,5 +3,5 @@
 ### The configuration is used by `kghub-downloader`.
 ### For more information, see https://github.com/monarch-initiative/kghub-downloader
 ---
-- url: https://raw.githubusercontent.com/monarch-initiative/cookiecutter-monarch-ingest/main/data/example_data.tsv
-  local_name: data/example_data.tsv
+- url: https://datadryad.org/api/v2/datasets/doi%3A10.5061%2Fdryad.1jwstqjz2/download
+  local_name: data/doi_10_5061_dryad_1jwstqjz2__v20220825.zip
