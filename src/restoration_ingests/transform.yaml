@@ -1,11 +1,11 @@
 # Config file for transforming data from a source
 # See additional/optional config parameters at https://koza.monarchinitiative.org/Ingests/source_config/
 
-name: "Sevilleja_et_al_2022"
+name: "sevilleja_transform"
 metadata: "./src/restoration_ingests/metadata.yaml"
 format: "csv"
 files:
-  - "./data/DATA-antsVeg_4years.csv"
+  - "DATA-antsVeg_4years.csv"
 #################################################################################################
 ### file_archive is typically optional, but required if:                                      ###
 ###    1. files is not provided                                                               ###

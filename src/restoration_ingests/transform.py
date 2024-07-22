@@ -3,26 +3,26 @@ import uuid  # For generating UUIDs for associations
 from biolink_model.datamodel.pydanticmodel_v2 import *  # Replace * with any necessary data classes from the Biolink Model
 from koza.cli_utils import get_koza_app
 
-koza_app = get_koza_app("data_source, ex. alliance, flybase, or hpoa._type_of_ingest, ex. gene, disease_to_phenotype, or disease_associations.")
+koza_app = get_koza_app("sevilleja_transform")
 
 while (row := koza_app.get_row()) is not None:
     # Code to transform each row of data
     # For more information, see https://koza.monarchinitiative.org/Ingests/transform
     entity_a = Entity(
-        id=f"XMPL:00000{row['example_column_1'].split('_')[-1]}",
-        name=row["example_column_1"],
+        id=f"plot:{row['Plot']}",
+        name=row['Plot'],
         category=["biolink:Entity"],
     )
     entity_b = Entity(
-        id=f"XMPL:00000{row['example_column_2'].split('_')[-1]}",
-        name=row["example_column_2"],
+        id=f"treat:{row['treat']}",
+        name=row['treat'],
         category=["biolink:Entity"],
     )
     association = Association(
         id=str(uuid.uuid1()),
-        subject=row["example_column_1"],
-        predicate=row["example_column_3"],
-        object=row["example_column_2"],
+        subject=row['Plot'],
+        predicate="plot_received_treatment",
+        object=row['treat'],
         subject_category="SUBJ",
         object_category="OBJ",
         category=["biolink:Association"],

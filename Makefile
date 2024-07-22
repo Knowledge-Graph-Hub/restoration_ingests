@@ -73,7 +73,7 @@ download:
 
 .PHONY: run
 run: download
-	$(RUN) ingest sevilleja_transform
+	$(RUN) ingest transform
 	$(RUN) python scripts/generate-report.py
 
 
