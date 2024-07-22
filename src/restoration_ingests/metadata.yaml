@@ -1,0 +1,14 @@
+# Metadata for the project
+# Uncomment and edit the fields you want to include in the metadata
+# See metadata properties at https://koza.monarchinitiative.org/Ingests/source_config/
+
+id:  'CURIE for the project'
+name: 'data_source, ex. alliance, flybase, or hpoa._type_of_ingest, ex. gene, disease_to_phenotype, or disease_associations.'
+ingest_title: 'restoration_ingests'
+ingest_url: 'https://github.com/Knowledge-Graph-Hub/restoration_ingests'
+description: 'This is the project description.'
+# source: 'Possibly replaced by provided_by'
+provided_by: 'data_source, ex. alliance, flybase, or hpoa.'
+# One of license and rights is possibly redundant
+license: 'Link to license'
+rights: 'Link to rights' 

@@ -1,0 +1,25 @@
+{
+  "template": "https://github.com/monarch-initiative/cookiecutter-monarch-ingest.git",
+  "commit": "a76709a1a8983e5d7396535c517133530044e6c8",
+  "checkout": null,
+  "context": {
+    "cookiecutter": {
+      "github_org_name": "Knowledge-Graph-Hub",
+      "project_name": "restoration_ingests",
+      "project_description": "This is the project description.",
+      "__repo_name": "restoration_ingests",
+      "__project_slug": "restoration_ingests",
+      "__project_url": "https://github.com/Knowledge-Graph-Hub/restoration_ingests",
+      "ingest_source": "data_source, ex. alliance, flybase, or hpoa.",
+      "ingest_type": "type_of_ingest, ex. gene, disease_to_phenotype, or disease_associations.",
+      "__ingest_name": "data_source, ex. alliance, flybase, or hpoa._type_of_ingest, ex. gene, disease_to_phenotype, or disease_associations.",
+      "min_python_version": "3.10",
+      "full_name": "Author 1",
+      "email": "author@org.org",
+      "__author": "Author 1 <author@org.org>",
+      "license": "BSD-3",
+      "_template": "https://github.com/monarch-initiative/cookiecutter-monarch-ingest.git"
+    }
+  },
+  "directory": null
+}
