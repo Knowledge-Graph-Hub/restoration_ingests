@@ -1,11 +1,11 @@
 # Config file for transforming data from a source
 # See additional/optional config parameters at https://koza.monarchinitiative.org/Ingests/source_config/
 
-name: "data_source, ex. alliance, flybase, or hpoa._type_of_ingest, ex. gene, disease_to_phenotype, or disease_associations."
+name: "Sevilleja_et_al_2022"
 metadata: "./src/restoration_ingests/metadata.yaml"
-format: "csv" # Format of the data files (csv or json)
+format: "csv"
 files:
-  - "./data/example_data.tsv"
+  - "./data/DATA-antsVeg_4years.csv"
 #################################################################################################
 ### file_archive is typically optional, but required if:                                      ###
 ###    1. files is not provided                                                               ###
@@ -13,27 +13,60 @@ files:
 ### If you have a file archive, uncomment the line below and provide the path to the archive  ###
 ### Otherwise, it is safe to remove this section and the file_archive parameter               ###
 #################################################################################################
-# file_archive: Optional path to a file archive containing files to process
+file_archive: "./data/doi_10_5061_dryad_1jwstqjz2__v20220825.zip"
 
 node_properties:
   # List of node properties to include, if ingesting nodes
   # Remove if not ingesting nodes
-  - id
-  - name
-  - category
+  - Plot
+  - loc
+  - locnr
+  - Patch ID
+  - Year
+  - year_nm
+  - treat
+  - treatment
+  - YearExavation
 
 edge_properties:
   # List of edge properties to include if ingesting edges
   # Remove if not ingesting edges
-  - id
-  - subject
-  - predicate
-  - object
-  - subject_category
-  - object_category
-  - category
-  - knowledge_level
-  - agent_type
+  - TotalCov
+  - Shrub
+  - Herb
+  - Moss
+  - DOM
+  - BareSoil
+  - Sanguisorba cov
+  - Meanheight
+  - STDEVheight
+  - Nitrogen
+  - Moisture
+  - pH
+  - MscaNr
+  - Mscacat
+  - LnigNr
+  - Lnigcat
+  - Lflanr
+  - Lflacat
+  - MschNr
+  - Mschcat
+  - MrugiNr
+  - Mrugicat
+  - MgalNr
+  - Mgalcat
+  - MsabNr
+  - Msabcat
+  - MrubNr
+  - Mrubcat
+  - MruguNr
+  - Mrugucat
+  - LumbraNr
+  - Lumbracat
+  - MyrtotNr
+  - Myrtotcat
+  - AnttotNr
+  - Anttotcat
 
 ### Optional parameters - uncomment to use, or remove to ignore
 
@@ -51,7 +84,7 @@ min_edge_count: 5
 
 ### CSV specific parameters
 
-delimiter: "\t" # Delimiter for csv files (REQUIRED if format is csv)
+delimiter: ";" # Delimiter for csv files (REQUIRED if format is csv)
 # columns: List of columns to include in output
 # header: Header row index
 # header_delimiter: Delimiter for header in csv files
